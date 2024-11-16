@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body {
+            background: url(./background.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            /* backdrop-filter: blur(10px); */
+        }
+        .container {
+            width: 500px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 10px;
+            margin: auto;
+            border-radius: 10px;
+            /* background: rgba(0, 0, 0, 0.3); */
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            /* backdrop-filter: blur(10px); */
+            /* -webkit-backdrop-filter: blur(10px); */
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .container div {
+            border: 1px solid rgb(255, 255, 255);
+            width: 100px;
+            height: 80px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 10px;
+            color: white;
+            font-weight: 700;
+            font-size: 30px;
+            transition: .5s all;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            user-select: none;
+        }
+        .container div:hover {
+            backdrop-filter: blur(0px);
+        }
+        .container div:active {
+            background: rgba(0, 0, 0, 0.17);
+        }
+        .container div:nth-child(1),
+        .container div:last-child {
+            width: 450px;
+        }
+        .container div:nth-child(18),
+        .container div:nth-child(19) {
+                width: 225px;
+            }
+        @media(max-width: 550px) {
+            .container {
+                min-width: 400px;
+            }
+            .container div {
+                min-width: 40px;
+                max-height: 50px;
+                font-size: 20px;
+            }
+            .container div:nth-child(1),
+            .container div:last-child {
+                width: 100%;
+            }
+            .container div:nth-child(18),
+            .container div:nth-child(19) {
+                max-width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>0</div>
+        <div>C</div>
+        <div>/</div>
+        <div>*</div>
+        <div>DEL</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>-</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>+</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>=</div>
+        <div>0</div>
+        <div>.</div>
+    </div>
+</body>
+</html>
